@@ -1,0 +1,20 @@
+{
+  "name": "torrent-app-dashboard",
+  "version": "1.0.0",
+  "description": "Gerencia de clientes torrent",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardx4/torrent-app-dashboard.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "parse-torrent": "^7.0.1",
+    "webtorrent": "^0.107.16"
+  }
+}
