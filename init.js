@@ -31,10 +31,27 @@ function checkdisks(){
         console.log("ERRO: Não foram encontrados discos no OS.");
     });
 }
-checkdisks();
-setTimeout(() => {if(diskwrong){return ;} checkdisks(); console.log(diskspace);},30000);
+//checkdisks();
+//setTimeout(() => {if(diskwrong){return ;} checkdisks(); console.log(diskspace);},30000);
 
 var server = http.createServer(app);
+var io = require('socket.io-client');
+const socket = io.connect('http://localhost:5002/serverdashboard', {reconnect: true});
+
+// Add a connect listener
+socket.on('connect', function(data) { 
+    socket.emit('getstatus', function (data) {
+        console.log(data);
+    });
+    console.log('Connected!');
+});
+
+var testes = setInterval(() => {
+    socket.emit('getclientcount', function (data) {
+        console.log('Clientes conectados: '+data);
+      });
+}, 5000);
+
 server.listen(port, function() {
     console.log('Listening on http://127.0.0.1:' + port);
 });

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Gerencia de clientes torrent",
   "main": "init.js",
-  "scripts": {    
+  "scripts": {
     "start": "node init.js"
   },
   "repository": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "node-os-utils": "^1.0.7"
+    "node-os-utils": "^1.0.7",
+    "socket.io": "^2.3.0"
   }
 }
