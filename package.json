@@ -16,7 +16,7 @@
     "dateformat": "^3.0.3",
     "express": "^4.17.1",
     "mysql": "^2.17.1",
-    "node-os-utils": "^1.0.7",
+    "node-os-utils": "^1.1.0",
     "socket.io": "^2.3.0"
   }
 }
